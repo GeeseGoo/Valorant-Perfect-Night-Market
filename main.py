@@ -46,7 +46,8 @@ class TestValstore:
     actions.move_to_element(element).perform()
     time.sleep(3)
     self.driver.find_element(By.CSS_SELECTOR, ".NightMarket_nightmarketButton__q3Iim > img").click()
-
+    
+    # Open each tile of night market
     element = self.driver.find_element_by_xpath('//*[@id="__next"]/div[4]/div/div/div[2]/div[1]/div[1]')
     actions = ActionChains(self.driver)
     actions.move_to_element(element).click().perform()
@@ -70,8 +71,10 @@ class TestValstore:
     element = self.driver.find_element_by_xpath('//*[@id="__next"]/div[4]/div/div/div[2]/div[6]/div[1]')
     actions = ActionChains(self.driver)
     actions.move_to_element(element).click().perform()
+    
+    # Take a screenshot and output to the current directory. You can change the directory by adding it before username.png
     time.sleep(1.5)
-    self.driver.save_screenshot('store_logs/'+username+'.png')
+    self.driver.save_screenshot(username+'.png')
     self.driver.find_element(By.CSS_SELECTOR, ".fa-times").click()
     self.driver.find_element(By.CSS_SELECTOR, ".Nav_user__1povI").click()
     self.driver.find_element(By.CSS_SELECTOR, ".Nav_dropdown__3e35A > li:nth-child(3)").click()
