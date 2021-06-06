@@ -1,0 +1,334 @@
+{
+  "id": "1eb180f7-bee6-4940-87f0-6350fbe39ba8",
+  "version": "2.0",
+  "name": "Create_valorant_account",
+  "url": "https://playvalorant.com/en-us/",
+  "tests": [{
+    "id": "02ea0c13-eaab-4d64-99a3-85f1cd5a93b8",
+    "name": "makevalaccounts",
+    "commands": [{
+      "id": "1bce158c-77ea-4193-a3a8-eab4b8d33352",
+      "comment": "",
+      "command": "setSpeed",
+      "target": "0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1c5a3de9-f2a1-4bfe-beed-1e4def8ee9c5",
+      "comment": "Change the value of this to how many accounts you want to make",
+      "command": "executeScript",
+      "target": "return #",
+      "targets": [],
+      "value": "accNum"
+    }, {
+      "id": "ef77340b-2c87-45d3-a321-c42510b7749b",
+      "comment": "Set this value to what email you want the accounts to be registered to",
+      "command": "store",
+      "target": "#",
+      "targets": [],
+      "value": "email"
+    }, {
+      "id": "24ae90eb-61d2-4ed9-896f-7bfd84c2d36e",
+      "comment": "Set this value to what you want the usernames to be (The program adds a number to the end)",
+      "command": "store",
+      "target": "#",
+      "targets": [],
+      "value": "username"
+    }, {
+      "id": "464ab7b6-46ee-47ba-9f88-92656e645f24",
+      "comment": "Set this value to what you want the password to be",
+      "command": "store",
+      "target": "#",
+      "targets": [],
+      "value": "password"
+    }, {
+      "id": "ad06cc49-f153-4d74-b9d8-7a1a2c538a4b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "03dfd83e-7967-4c90-b07d-5522375e7bd1",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5edbbeb6-3c74-4280-9f1b-e7e779b6c4a7",
+      "comment": "This changes the speed at which the commands are run, faster speeds trip the captcha",
+      "command": "setSpeed",
+      "target": "1200",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c5ff7e47-d0ac-49e4-b699-8a423d23fdf8",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${i} + 1",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "8b685988-b6e9-44a4-8212-0f9fcec0f2a0",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${username} + ${i}",
+      "targets": [],
+      "value": "username_id"
+    }, {
+      "id": "08eb5772-cab4-4d08-998e-1b1e8531699c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var mail = ${email}.split('@'); return mail[0] + '+' + ${username_id}+'@' +mail[1]",
+      "targets": [],
+      "value": "email_id"
+    }, {
+      "id": "118eb9f3-c366-47e4-bf3e-5b54c20e28f0",
+      "comment": "",
+      "command": "echo",
+      "target": "${username_id}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d82b4cd4-7670-42b3-81f3-f4957d8fa3e4",
+      "comment": "",
+      "command": "setSpeed",
+      "target": "0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "572792dd-e0e3-4308-bef3-c571bf193bf4",
+      "comment": "",
+      "command": "open",
+      "target": "https://playvalorant.com/en-us/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "83664a17-ef9e-4f09-8ee8-cb4835f97a23",
+      "comment": "",
+      "command": "click",
+      "target": "css=.HomeHero-module--downloadButton--3BblN .PrimaryButton-module--label-text--23ce5",
+      "targets": [
+        ["css=.HomeHero-module--downloadButton--3BblN .PrimaryButton-module--label-text--23ce5", "css:finder"],
+        ["xpath=//div[@id='gatsby-focus-wrapper']/section/div[2]/button/div/span[2]", "xpath:idRelative"],
+        ["xpath=//button/div/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'PLAY FREE')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f75154d7-3ad1-4461-9c0c-194cff09292c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.PrimaryButton-module--borderDark--3AUaI:nth-child(2) .PrimaryButton-module--label-text--23ce5",
+      "targets": [
+        ["css=.PrimaryButton-module--borderDark--3AUaI:nth-child(2) .PrimaryButton-module--label-text--23ce5", "css:finder"],
+        ["xpath=//div[2]/div[2]/button/div/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "26884473-3639-4a9f-9cdd-43c71cf3d371",
+      "comment": "",
+      "command": "click",
+      "target": "css=.signup-link",
+      "targets": [
+        ["css=.signup-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Create Account')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "85fee976-0619-44c7-a21f-bace34db0758",
+      "comment": "",
+      "command": "click",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.field__form-input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c33a93ba-c7b7-4bf9-a4c2-b2d76d58475e",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.field__form-input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${email_id}"
+    }, {
+      "id": "d502ebce-f8d7-43d7-be58-9ee142d81e96",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.field__form-input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "f0eef2d6-862c-45e5-a417-fa7e8e558b2e",
+      "comment": "",
+      "command": "type",
+      "target": "name=date_of_birth_day",
+      "targets": [
+        ["name=date_of_birth_day", "name"],
+        ["css=.web-date-input--has-value > .web-date-input__form-input", "css:finder"],
+        ["xpath=//input[@name='date_of_birth_day']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "09"
+    }, {
+      "id": "37151e99-1149-441e-8252-2a6d79127600",
+      "comment": "",
+      "command": "type",
+      "target": "name=date_of_birth_month",
+      "targets": [
+        ["name=date_of_birth_month", "name"],
+        ["css=.web-date-input__input:nth-child(4) > .web-date-input__form-input", "css:finder"],
+        ["xpath=//input[@name='date_of_birth_month']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "09"
+    }, {
+      "id": "18561853-49c8-43a0-87ed-b8467e49e65e",
+      "comment": "",
+      "command": "type",
+      "target": "name=date_of_birth_year",
+      "targets": [
+        ["name=date_of_birth_year", "name"],
+        ["css=.web-date-input__input:nth-child(5) > .web-date-input__form-input", "css:finder"],
+        ["xpath=//input[@name='date_of_birth_year']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "1999"
+    }, {
+      "id": "666869c7-6105-4c1c-aa4a-b710604be2c9",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=date_of_birth_year",
+      "targets": [
+        ["name=date_of_birth_year", "name"],
+        ["css=.web-date-input__input:nth-child(5) > .web-date-input__form-input", "css:finder"],
+        ["xpath=//input[@name='date_of_birth_year']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "5b55ebcd-8531-4fed-a58b-5361d048fd3e",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.field__form-input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${username_id}"
+    }, {
+      "id": "d6cdd00f-f0ad-4852-8be9-0f66a0b5896e",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.field__form-input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "547126f9-49ee-4028-8a9f-6ca469a9aeb6",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.field--focus .field__form-input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1ded8692-be0a-4717-9e8a-0d22d8775427",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.password-field--warning .field__form-input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${password}"
+    }, {
+      "id": "85253132-27e0-4627-bed9-3349eac5f2a8",
+      "comment": "",
+      "command": "click",
+      "target": "name=confirm_password",
+      "targets": [
+        ["name=confirm_password", "name"],
+        ["css=.field--focus .field__form-input", "css:finder"],
+        ["xpath=//input[@name='confirm_password']", "xpath:attributes"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf5228d4-f84e-4238-aafa-e30a2e5fdbdf",
+      "comment": "",
+      "command": "type",
+      "target": "name=confirm_password",
+      "targets": [
+        ["name=confirm_password", "name"],
+        ["css=.field--focus .field__form-input", "css:finder"],
+        ["xpath=//input[@name='confirm_password']", "xpath:attributes"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": "${password}"
+    }, {
+      "id": "c541697c-cf10-46f3-8783-891a6e549962",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mobile-button",
+      "targets": [
+        ["css=.mobile-button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d65ea8f7-f87f-4dca-af8c-67b6292ab126",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=#gatsby-focus-wrapper > section > div.sectionWrapper.DownloadClient-module--sectionWrapper--TpObB > h2",
+      "targets": [],
+      "value": "10000"
+    }, {
+      "id": "86d0af8d-e4b7-4dce-9821-cd65bc8d4cbb",
+      "comment": "",
+      "command": "repeatIf",
+      "target": "${i} < ${accNum}",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "3a87af6d-5227-42c2-83a4-9c4c6d6e1ce0",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://playvalorant.com/en-us/", "https://trix-editor.org/"],
+  "plugins": []
+}
