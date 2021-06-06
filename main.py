@@ -7,7 +7,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 # USER INPUT HERE
 username = "INPUT USERNAME"
 password = "INPUT PASSWORD"
-
+total_accounts = "INPUT NUMBER OF ACCOUNTS HERE"
 
 
 class TestValstore:
@@ -84,7 +84,7 @@ valstore = TestValstore()
 valstore.setup_method()
 accounts = [
 ]
-for i in range(1, 11):
+for i in range(1, total_accounts):
     accounts.append(username+str(i))
 
 for account in accounts:
