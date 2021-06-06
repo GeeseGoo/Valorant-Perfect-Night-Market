@@ -5,8 +5,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 
 # USER INPUT HERE
-username = "GeeseJoo"
-password = "Jaygay123"
+username = "INPUT USERNAME"
+password = "INPUT PASSWORD"
 
 
 
