@@ -13,7 +13,7 @@ It's also possible to run the browsers headlessly. Click here for more informati
 
 ## Usage
 ### Creating the Accounts
-You must enter in the email you want the accounts to be associated with, and a unique username, and a password. You can change the speed at which the commands are run, but your efficiency may be affected. 
+First, download the Selenium IDE extension here: https://www.selenium.dev/selenium-ide/. After opening the file, you must enter in the email you want the accounts to be associated with, and a unique username, and a password. You can change the speed at which the commands are run, but your efficiency may be affected. 
 
 ### Viewing the Night Market
-If you created your accounts using the Selenium script, Just input your username and password, and be sure to input how many accounts you created. If you want to view the night market of accounts that were not created using the script, you have to manually put them in the accounts list. The script will output images into the current directory, if you want to change it just change the path of the screenshot function. 
+Make sure that python 3.9 is downloaded. Also remember to run pip install selenium before trying to run the script. If you created your accounts using the Selenium script, Just input your username and password, and be sure to input how many accounts you created. If you want to view the night market of accounts that were not created using the script, you have to manually put them in the accounts list. The script will output images into the current directory, if you want to change it just change the path of the screenshot function. 
